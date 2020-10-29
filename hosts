@@ -1,0 +1,6 @@
+localhost
+- name: Ensure host rh8-vm03 in hosts file
+  lineinfile:
+    path: /etc/hosts
+    line: 172.31.48.59 jenkins.ansible.com 
+    state: present

@@ -1,0 +1,7 @@
+- hosts: localhost
+  connection: local
+  tasks:
+          - name: using package modele
+            package:
+                    name: httpd
+                    state: present

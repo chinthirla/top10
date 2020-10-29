@@ -1,0 +1,5 @@
+- hosts: localhost
+  connection: local
+  tasks:
+          - name: using command module
+            command: ls

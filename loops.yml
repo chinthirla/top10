@@ -1,0 +1,10 @@
+- hosts: localhost
+  connection: local
+  become: yes
+  become_user: vijay
+  tasks:
+          - name: this will work
+            copy: src=/home/ansible/git.yml dest=/home/
+            retries: 3
+            delay: 2
+            when: False

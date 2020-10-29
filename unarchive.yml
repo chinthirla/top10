@@ -1,0 +1,10 @@
+- hosts: localhost
+  connection: local
+  tasks:
+          - name: archive the file 
+            unarchive:
+                    src: /home/ansible/top10/app.tar
+                    dest: /home/ansible/top10/sample/
+                    remote_src: yes
+
+

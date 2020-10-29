@@ -1,0 +1,21 @@
+- hosts: localhost
+  connection: local
+  tasks:
+          - name: module copy
+            copy:
+                    src: /home/ansible/loops.yml
+                    dest: /home/ansible/top10/
+                    owner: root
+                    group: root
+                    mode: 0644
+- hosts: localhost
+  connection: local
+  tasks:
+          - name: Static Content copy via copy module
+            copy:
+                   content: "Copying static content to file"
+                   dest: /home/ansible/top10/file.txt
+                   owner: root
+                   group: root
+                   mode: 0664  
+

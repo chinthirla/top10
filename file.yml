@@ -1,0 +1,12 @@
+- hosts: localhost
+  connection: local
+  tasks:
+          - name: using file based module
+            file:
+                    path: /home/ansible/top10/sample
+                    state: directory
+                    owner: vijay
+                    group: root
+                    mode: 0777
+                    #state: absent   to delete directory
+                    #recurse: yes    to set file properties on directories recursively by using the parameter

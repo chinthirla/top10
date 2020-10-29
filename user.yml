@@ -1,0 +1,12 @@
+- hosts: localhost
+  connection: local
+  tasks:
+          - name: using user module
+            user:
+                    name: chinthirla
+                    group: users
+                    groups: wheel
+                    uid: 2001
+                    password: "{{ 'Onm0bile' | password_hash('sha512') }}"
+                    state: present
+                    update_password: on_create

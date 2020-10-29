@@ -1,0 +1,11 @@
+- hosts: localhost
+  connection: local
+  tasks:
+          - name: changing conf of one line by using lineinfile module
+            lineinfile:
+                    path: /etc/ssh/sshd_config
+                    regexp: '^MaxAuthTries'
+                    line: MaxAuthTries 8
+                    state: present
+
+         

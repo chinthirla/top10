@@ -1,0 +1,19 @@
+- hosts: localhost
+  connection: local
+  tasks:
+          - name: using firewalld module for redhat based os
+            firewalld:
+                    service: http
+                    state: enabled
+                    permanent: yes
+                    immediate: yes
+#custom ports instead of service names with the port parameter
+  tasks:
+          - name: configuring custom page
+            firewalld:
+                    port: 3000/tcp
+                    state: enabled
+                    permanent: yes
+                    immediate: yes
+
+

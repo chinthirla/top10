@@ -1,0 +1,8 @@
+- hosts: localhost
+  connection: local
+  tasks:
+          - name: service restart module
+            service:
+                    name: httpd
+                    state: started
+                    enabled: yes

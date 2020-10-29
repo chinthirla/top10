@@ -1,0 +1,10 @@
+- hosts: localhost
+  connection: local
+  tasks:
+          - name: using template and copying dynamic text
+            template:
+                    src: /home/ansible/top10/jinja2.j2
+                    dest: /home/ansible/top10/template.txt
+                    owner: root
+                    group: root
+                    mode: 0777

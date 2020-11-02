@@ -1,0 +1,7 @@
+- hosts: localhost
+  connection: local
+  vars:
+    motd_value: "{{ lookup('file', '/etc/motd') }}"
+  tasks:
+   - debug:
+       msg: "motd value is {{ motd_value }}"

@@ -1,0 +1,14 @@
+- hosts: localhost
+  connection: local
+  tasks:
+          - debug: 
+                    msg: "Truthy"
+            when: value is truthy(convert_bool=True)
+            vars:
+                    value: "yes"
+ tasks:
+         - debug:
+                   msg: "Falsy"
+                 when: value is Falsy(convert_bool=True)
+                 vars:
+                         value: "off"

@@ -1,0 +1,8 @@
+- hosts: localhost
+  connection: local
+  vars:
+          url: "http://dm.onmo.com/plans?svc=13"
+  tasks:
+          - debug:
+                  msg: "match pattren 1"
+            when: url is match("http://dm.onmo.com/.*?svc=13")

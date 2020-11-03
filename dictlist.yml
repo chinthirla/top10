@@ -1,0 +1,10 @@
+- hosts: localhost
+  connection: local
+  vars:
+          hosts:
+                  testhost1: 172.0.0.2
+                  testhost2: 172.0.0.3
+  tasks:
+          - debug:
+                  msg: '{{ item }}'
+                  loop: "{{ hosts.key() | list }}"
